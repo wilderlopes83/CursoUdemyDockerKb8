@@ -1,0 +1,8 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    build: . #quer dizer que vai chamar o arquivo dockerfile para criar a imagem
+    ports:
+      - "8081:8081" #porta exposta:porta dentro do container
