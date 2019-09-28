@@ -3,6 +3,7 @@ services:
   redis-server:
     image: 'redis'
   node-app:
+    restart: on-failure #so reinicia o container se for um erro de app
     build: . #quer dizer que vai chamar o arquivo dockerfile para criar a imagem
     ports:
       - "8081:8081" #porta exposta:porta dentro do container
